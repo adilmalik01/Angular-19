@@ -1,0 +1,28 @@
+nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    padding: 0 30px;
+}
+
+.links {
+    padding: 0 30px;
+}
+
+ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}

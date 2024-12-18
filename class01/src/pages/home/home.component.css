@@ -1,0 +1,7 @@
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns:  4fr 4fr 4fr  ;
+    place-items: center;
+    gap: 10px;
+}
