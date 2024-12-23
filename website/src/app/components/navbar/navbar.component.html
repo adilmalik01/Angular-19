@@ -1,0 +1,86 @@
+<nav class="bg-white border-b sticky top-0 z-[9999999999]">
+  <div class="max-w-7xl m-auto sm:px-6 lg:px-6">
+    <div class="flex items-center justify-between max-md:px-[40px] px-[120px] max-lg:h-[70px] h-[90px]">
+      <div class="flex justify-center">
+        <div class="flex-shrink-0">
+          <a routerLink="/">
+            <img src="/logo.png" alt="logo" width="70" height="80" />
+          </a>
+        </div>
+      </div>
+
+      <div class="hidden lg:flex items-center space-x-3 text-black/80">
+        <a
+        routerLink="/"
+          class="border-b-[3px] transition-all duration-700 text-[14px] tracking-tight font-semibold border-transparent hover:border-black active:border-black px-3 py-2"
+        >
+          Home
+        </a>
+        <a
+        routerLink="/products"
+          class="border-b-[3px] transition-all duration-700 text-[14px] tracking-tight font-semibold border-transparent hover:border-black px-3 py-2"
+        >
+          Products
+        </a>
+        <a
+        routerLink="/about"
+          class="border-b-[3px] transition-all duration-700 text-[14px] tracking-tight font-semibold border-transparent hover:border-black px-3 py-2"
+        >
+          About
+        </a>
+        <a
+        routerLink="/contact"
+          class="border-b-[3px] transition-all duration-700 text-[14px] tracking-tight font-semibold border-transparent hover:border-black px-3 py-2"
+        >
+          Contact
+        </a>
+      </div>
+
+      <div class="lg:hidden flex items-center">
+        <button (click)="toggleNavbar()">
+          <ng-container *ngIf="isClick; else listIcon">
+            <i class="icon-xl" style="font-size: 25px;">&#x2715;</i>
+          </ng-container>
+          <ng-template #listIcon>
+            <i class="icon-xl" style="font-size: 25px;">&#x2630;</i>
+          </ng-template>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="lg:hidden transition-all duration-300 ease-out overflow-hidden"
+    [ngClass]="{
+      'max-h-60 opacity-100': isClick,
+      'max-h-0 opacity-0': !isClick
+    }"
+  >
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a
+        href="/"
+        class="border-b-[3px] block transition-all duration-300 tracking-tight font-semibold border-transparent hover:bg-[#33373d] hover:text-white px-3 py-2"
+      >
+        Home
+      </a>
+      <a
+        href="/blog"
+        class="border-b-[3px] block transition-all duration-300 tracking-tight font-semibold border-transparent hover:bg-[#33373d] hover:text-white px-3 py-2"
+      >
+        Blog
+      </a>
+      <a
+        href="/about"
+        class="border-b-[3px] block transition-all duration-300 tracking-tight font-semibold border-transparent hover:bg-[#33373d] hover:text-white px-3 py-2"
+      >
+        About
+      </a>
+      <a
+        href="/contact"
+        class="border-b-[3px] block transition-all duration-300 tracking-tight font-semibold border-transparent hover:bg-[#33373d] hover:text-white px-3 py-2"
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+</nav>

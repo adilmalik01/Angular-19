@@ -1,0 +1,9 @@
+
+
+
+.textStyle{
+ @apply
+  bg-fuchsia-500  text-[30px] text-center font-normal mt-3 underline
+}
+
+
