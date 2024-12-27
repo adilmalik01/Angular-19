@@ -1,0 +1,32 @@
+<div class="weather-container">
+  <div class="weather-card">
+    <!-- City Input Field -->
+    <input
+      type="text"
+      id="city-input"
+      placeholder="Enter city"
+      class="city-input"
+      [(ngModel)]="cityName"
+    />
+    <button (click)="getWheather()" id="search-btn" class="search-btn">
+      Search
+    </button>
+
+    <!-- Weather Info -->
+    <h1 class="city-name">{{wheatherData.name}}</h1>
+    <p class="weather-description">Sunny</p>
+    <div class="temperature">
+      <span>{{wheatherData.main.temp}} C</span>
+    </div>
+    <div class="weather-details">
+      <div class="detail">
+        <span class="detail-title">Humidity:</span>
+        <span class="detail-value">60%</span>
+      </div>
+      <div class="detail">
+        <span class="detail-title">Wind Speed:</span>
+        <span class="detail-value">15 km/h</span>
+      </div>
+    </div>
+  </div>
+</div>
