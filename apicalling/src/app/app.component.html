@@ -1,0 +1,13 @@
+<div class="main">
+  <div class="category">
+    <div class="head">
+      <input type="text" [(ngModel)]="category" />
+      <button (click)="AddCategory()">Submit</button>
+    </div>
+    <div class="body">
+      <ul *ngFor="let item of categoryData">
+        <li>{{ item.category }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
